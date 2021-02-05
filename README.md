@@ -3,7 +3,7 @@
 
 ET.PenmanMonteith: A package for calculate daily Penman-Monteith Evapotranspiration from hourly data.
 
-This package is a shell for the function `Evapotranspiration::ET.PenmanMonteith` from `Evapotranspiration` package written by [Danlu Guo](https://cran.r-project.org/web/packages/Evapotranspiration/index.html)
+This package is a shell for the function `Evapotranspiration::ET.PenmanMonteith` from `Evapotranspiration` package written by [Danlu Guo](https://cran.r-project.org/web/packages/Evapotranspiration/index.html).
 
 Use : 
 
