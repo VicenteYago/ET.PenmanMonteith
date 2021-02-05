@@ -1,0 +1,20 @@
+Package: ET.PenmanMonteith
+Type: Package
+Title: Evapotranspiration from Penman-Monteith
+Version: 0.1.0
+Author: Jose Vicente Yago Martinez
+Maintainer: Jose Vicente Yago Martinez <josevicente.yago@um.es>
+Description: Just an interface for quickly computaion of FAO Penman-Monteith Evapotransporation from Evapotranspiration package.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports:
+  Evapotranspiration,
+  lubridate, 
+  zoo,
+  utils,
+  weathermetrics,
+  usethis
+Depends:
+  magrittr
+RoxygenNote: 7.1.1
