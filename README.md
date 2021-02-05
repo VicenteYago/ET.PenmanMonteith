@@ -5,9 +5,14 @@ ET.PenmanMonteith: A package for calculate daily Penman-Monteith Evapotranspirat
 
 This package is a shell for the function `Evapotranspiration::ET.PenmanMonteith` from `Evapotranspiration` package written by [Danlu Guo](https://cran.r-project.org/web/packages/Evapotranspiration/index.html).
 
-Use : 
+Usage : 
 
 ```{r}
+install.packages("devtools")
+library(devtools)
+install_github("VicenteYago/ET.PenmanMonteith")
+library("ET.PenmanMonteith")
+
 data(meteo)
 ET.PenmanMonteith::et0(
   dates = meteo$dates,
