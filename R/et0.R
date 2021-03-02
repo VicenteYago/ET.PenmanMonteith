@@ -38,7 +38,7 @@ fix.last.day <- function(df){
 #' @param lat latitude.
 #' @param elev numeric elevation in mts.
 #' @param crop character "short" (default) of "tall". See \code{\link[Evapotranspiration]{ET.PenmanMonteith}}.
-#'
+#' @param msg  character "yes" or "no".  See param "message" in \code{\link[Evapotranspiration]{ET.PenmanMonteith}}.
 #' @return dataframe with columns \code{date} and \code{et0} containing the daily Penman-Monteith Reference Evapotranspiration
 #'
 #' @examples
@@ -53,7 +53,7 @@ fix.last.day <- function(df){
 #'   elev  = 313) -> et0.df
 #' head(et0.df)
 #' @export
-et0<-function(dates, temp, hr, uz, rs, lat, elev, crop = "short"){
+et0<-function(dates, temp, hr, uz, rs, lat, elev, crop = "short", msg = "no"){
   input.df <- data.frame(dates = dates,
                          temp  = temp,
                          hr    = hr,
@@ -116,7 +116,8 @@ et0<-function(dates, temp, hr, uz, rs, lat, elev, crop = "short"){
                                               solar="data",
                                               wind="yes",
                                               save.csv = "No",
-                                              crop = crop)
+                                              crop = crop,
+                                              message = msg)
 
   results.PenmanMonteith$ET.Daily
 

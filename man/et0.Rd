@@ -4,7 +4,7 @@
 \alias{et0}
 \title{Get daily Penman-Monteith Evapotranspiration from hourly data}
 \usage{
-et0(dates, temp, hr, uz, rs, lat, elev, crop = "short")
+et0(dates, temp, hr, uz, rs, lat, elev, crop = "short", msg = "no")
 }
 \arguments{
 \item{dates}{POSIXct dates vector.}
@@ -22,6 +22,8 @@ et0(dates, temp, hr, uz, rs, lat, elev, crop = "short")
 \item{elev}{numeric elevation in mts.}
 
 \item{crop}{character "short" (default) of "tall". See \code{\link[Evapotranspiration]{ET.PenmanMonteith}}.}
+
+\item{msg}{character "yes" or "no".  See param "message" in \code{\link[Evapotranspiration]{ET.PenmanMonteith}}.}
 }
 \value{
 dataframe with columns \code{date} and \code{et0} containing the daily Penman-Monteith Reference Evapotranspiration
