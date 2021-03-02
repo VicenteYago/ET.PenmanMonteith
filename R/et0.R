@@ -101,7 +101,7 @@ et0<-function(dates, temp, hr, uz, rs, lat, elev, crop = "short"){
                                                          "Rs"),   # Radiacion soloar
                         climatedata = climatedata,
                         constants = mi.constants,
-                        stopmissing=c(10,10,3), #max % lost, max % duration, max % missing days
+                        stopmissing=c(30,30,10), #max % lost, max % duration, max % missing days
                         timestep = "subdaily",
                         interp_missing_days = T,
                         interp_missing_entries = T,
