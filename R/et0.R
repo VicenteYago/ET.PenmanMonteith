@@ -10,7 +10,7 @@
 #' @importFrom magrittr %>%
 NULL
 
-data("constants",package = "Evapotranspiration",envir =  environment())
+data("constants",package = "Evapotranspiration", envir =  environment())
 
 fix.last.day <- function(df){
 
@@ -82,7 +82,7 @@ et0<-function(dates, temp, hr, uz, rs, lat, elev, crop = "short"){
   mi.constants$as  <- NULL
   mi.constants$bs  <- NULL
 
-  tDEW <- weathermetrics::humidity.to.dewpoint(rh = hr,  t =  temp)
+  tDEW <- weathermetrics::humidity.to.dewpoint(rh = hr,  t =  temp, temperature.metric = "celsius")
 
   data.frame(Year = dates %>% lubridate::year(),
              Month= dates %>% lubridate::month(),
