@@ -21,9 +21,9 @@ fix.last.day <- function(df){
 
   date <- df[,1]
   if (!is.last.day.complete(date)){
-    days <- date %>% lubridate::day()
+    days <- date %>% lubridate::date()
     day.excluded <- days %>% utils::tail(1)
-    mask <- lubridate::day(date) != day.excluded
+    mask <- lubridate::date(date) != day.excluded
     return(df[mask,])
   }
   else return(df)
