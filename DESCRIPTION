@@ -14,7 +14,8 @@ Imports:
   zoo,
   utils,
   weathermetrics,
-  usethis
+  usethis,
+  dplyr
 Depends:
   magrittr
 RoxygenNote: 7.1.1

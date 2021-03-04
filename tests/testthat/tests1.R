@@ -1,8 +1,8 @@
 context("basic test")
 library(ET.PenmanMonteith)
 
-
 test_that("individual vs collective computation correcteness", {
+  library(dplyr)
   data(meteo)
 
   ##################### INDIVIDUAL
@@ -20,9 +20,8 @@ test_that("individual vs collective computation correcteness", {
         elev  = 313)
     }) -> et0s
 
-  data.frame(day = names(et0s),
-             et0 = lapply(et0s, "[",2) %>% unlist()) -> et0.split
-  rownames(et0.split) <- NULL
+  et0.split <- dplyr::bind_rows(et0s)
+
 
   ##################### COLLECTIVE
   ET.PenmanMonteith::et0(
