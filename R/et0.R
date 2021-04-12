@@ -122,6 +122,6 @@ et0<-function(dates, temp, hr, uz, rs, lat, elev, crop = "short", msg = "no"){
   results.PenmanMonteith$ET.Daily
 
   data.frame(
-            date  = zoo::index(results.PenmanMonteith$ET.Daily ) %>% lubridate::with_tz(lubridate::tz(dates[1])),
+            date  = zoo::index(results.PenmanMonteith$ET.Daily ) %>% lubridate::with_tz(lubridate::tz(dates[1])) %>% as.Date(),
             et0   = zoo::coredata(results.PenmanMonteith$ET.Daily )) %>% return()
 }
